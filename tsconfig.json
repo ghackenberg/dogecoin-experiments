@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "module": "NodeNext",
+        "moduleResolution": "nodenext",
+        "lib": ["ES2015", "DOM"],
+        "jsx": "react-jsx"
+    }
+}
