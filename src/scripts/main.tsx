@@ -1,19 +1,12 @@
-import { DogecoinJS } from '@mydogeofficial/dogecoin-js'
+import { createRoot } from 'react-dom/client'
+import App from './components/App.js'
 
-async function boot() {
-    const doge = await DogecoinJS.init()
+const container = document.createElement('div')
 
-    const [privKey, pubKey] = doge.generatePrivPubKeypair()
+container.className = 'container'
 
-    console.log(privKey)
-    console.log(pubKey)
+document.body.appendChild(container)
 
-    const txIndex = doge.startTransaction()
+const root = createRoot(container)
 
-    console.log(txIndex)
-
-    //doge.finalizeTransaction(txIndex, ...)
-
-}
-
-boot()
+root.render(<App/>)

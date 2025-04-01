@@ -7,7 +7,7 @@ export default defineConfig(() => {
             react()
         ],
         define: {
-            __filename: '"test"'
+            __filename: '"test"' // fix dogecoin-js runtime bug after bundling!!
         }
     }
 })
